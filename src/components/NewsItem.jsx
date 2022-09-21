@@ -15,7 +15,7 @@ export default function NewsItem({ title, description, imageUrl, newsUrl, publis
     <>
    
     <div className="container">
-                <div className="card" style={{ backgroundColor : darkMode===true? "#344641":"biege" , padding:"10px" , marginBottom:"10px"}}>
+                <div className="card" style={{ backgroundColor : darkMode===true? "#344641":"whitesmoke" , padding:"10px" , marginBottom:"10px"}}>
                     <img  src={imageUrl===null || imageUrl=="" ? nopreview : imageUrl} className="card-img-top" alt="No preview available"/>
                     <div className="card-body" style={{ color : darkMode===true? "white":"black"}}>
                         <span className="badge rounded-pill bg-secondary align-top">{source === null ? "unknown" : source}</span>
