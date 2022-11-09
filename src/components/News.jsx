@@ -26,12 +26,11 @@ export default function News({key, category, setProgress, darkMode}) {
       let data = await fetch(url ,
         {
         headers: {
-                'x-api-key': "GYWZXR1g_XDgr9z_MXRUsJ-vAh7KAacxpjY0KttPg5Q"
+          'x-api-key':"Odl7dvep8vbOeuYY65pcSd7hFZ3MbH7MJxy1MZKAlbg"
+               
             }
       });
-      let parsedData = await data.json();
-    //   console.log("after fetching parsedData is :", parsedData);  
-    //   console.log("parsedData.articles is", parsedData.articles);  
+      let parsedData = await data.json(); 
       setArticles(parsedData.articles);
       setLoading(false);
       setTotalResults(parsedData.total_pages);
@@ -43,12 +42,11 @@ export default function News({key, category, setProgress, darkMode}) {
       setPage(page=>page+1);
 
       setLoading(true);
-      //let url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=58298554688f410e98d7f66e8c4ddb10&page=${page}&pageSize=6`;
-      
       let url= `https://api.newscatcherapi.com/v2/latest_headlines?topic=${category}&countries=IN&page=${page}&page_size=5`
       let data = await fetch(url ,{
         headers: {
-                'x-api-key': "GYWZXR1g_XDgr9z_MXRUsJ-vAh7KAacxpjY0KttPg5Q"
+                
+                'x-api-key': "Odl7dvep8vbOeuYY65pcSd7hFZ3MbH7MJxy1MZKAlbg"
             }
       });
 
